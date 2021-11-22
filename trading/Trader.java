@@ -1,4 +1,4 @@
-
+package trading;
 
 import trading.Goods;
 import java.util.Random;

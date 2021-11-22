@@ -3,6 +3,7 @@ package trading;
 import java.util.HashMap;
 import java.util.Map;
 
+import test.TestCitizen;
 import trading.Goods;
 
 /**
