@@ -1,5 +1,7 @@
 package trading; //! keep getting (The declared package "trading" does not match the expected package "") error
 
+import java.util.Objects;
+
 /**
  * Represents a single trade in the trading game: an amount of gems, and the amount of
  * goods that will be given in response.

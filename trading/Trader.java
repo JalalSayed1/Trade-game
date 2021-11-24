@@ -1,7 +1,11 @@
 package trading;
 
 import trading.Goods;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * Represents a trader in a trading game, who trades goods for gems. A trader
@@ -21,6 +25,7 @@ public class Trader {
      * Creates a new trader, with a single randomly-generated trade.
      */
     public Trader() {
+        trade = new ArrayList<>();
         // new trader gets a random trade in their list:
         addRandomTrade();
     }
@@ -32,16 +37,16 @@ public class Trader {
 	 */
     public List<Trade> getTrades(){
         // return immutable list:
-        return (trades.stream().collect(Collectors.toList()));
+        return (trade.stream().collect(Collectors.toList()));
     }
 
     /**
 	 * Adds a new randomly-generated trade to the list.
 	 */
-    public addRandomTrade(){
+    public void addRandomTrade(){
         // get random values for gems, amount and type of goods:
-        int gems = rand.nextInt(6); // random num between 0 and 5 (inclusive)
-        int amount = rand.nextInt(6); // random num between 0 and 5 (inclusive)
+        int gems = rand.nextInt(5) + 1; // random num between 1 and 5 (inclusive)
+        int amount = rand.nextInt(5) + 1; // random num between 1 and 5 (inclusive)
         Goods goods = Goods.values()[rand.nextInt(Goods.values().length)];
 
         this.trade.add(new Trade(gems, amount, goods));

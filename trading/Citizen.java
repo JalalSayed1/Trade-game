@@ -3,7 +3,6 @@ package trading;
 import java.util.HashMap;
 import java.util.Map;
 
-import test.TestCitizen;
 import trading.Goods;
 
 /**
@@ -58,7 +57,7 @@ public class Citizen {
 
             }
             // otherwise, add the new amount to the value of that key:
-            inventory.put(trade.getGoods(), inventory.get(goods)+trade.getAmount());
+            inventory.put(trade.getGoods(), inventory.get(trade.getGoods())+trade.getAmount());
             
             return true;
         }
