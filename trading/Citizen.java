@@ -3,8 +3,6 @@ package trading;
 import java.util.HashMap;
 import java.util.Map;
 
-import trading.Goods;
-
 /**
  * Represents a citizen in the trading game, who can trade with a trader. A citizen starts
  * with an initial amount of gems and an empty goods inventory. Each time they do a trade, 
@@ -27,6 +25,7 @@ public class Citizen {
      */
     public Citizen(int gems) {
         this.gems = gems;
+        inventory = new HashMap<>();
     }
     
     public int getGems(){

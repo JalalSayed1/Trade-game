@@ -1,11 +1,8 @@
 package trading;
 
-import trading.Goods;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 /**
  * Represents a trader in a trading game, who trades goods for gems. A trader
@@ -37,7 +34,7 @@ public class Trader {
 	 */
     public List<Trade> getTrades(){
         // return immutable list:
-        return (trade.stream().collect(Collectors.toList()));
+        return (trade.stream().toList());
     }
 
     /**

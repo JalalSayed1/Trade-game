@@ -1,4 +1,4 @@
-package trading; //! keep getting (The declared package "trading" does not match the expected package "") error
+package trading;
 
 import java.util.Objects;
 
@@ -46,7 +46,6 @@ public class Trade {
     public void execute(Trader trader, Citizen citizen){
         // Check if it's valid first:
         if (!trader.getTrades().contains(this)) {
-            //! what is the difference between throw exception and throw new exception?
 			throw new IllegalArgumentException("This trade does not belong to the trader");
         }
 
